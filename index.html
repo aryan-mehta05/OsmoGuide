@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img class="logo" src="public/images/Weather-app-logo.png" alt="App Logo">
+            <a href="#">Weather App</a>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#future-forecast">Forecast</a></li>
+                <li><a href="#activity-section">Activity</a></li>
+            </ul>
+        </nav>
+        <a href="#contact-section" class="cta"><button>Contact</button></a>
+    </header>
+
+    <section class="weather" id="weather">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search-query" placeholder="Search Location">
+                <button type="submit" id="search-button"><span class="fas fa-search-location"></span></button>
+            </div>
+            
+            <div class="current-info">
+                <div class="weather-main">
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather icon" class="w-icon" id="location-icon">
+                    </div>
+                    <div class="weather-location">
+                        <h1 class="location" id="location-temp">29.79&#176;C</h1>
+                        <h1 class="location" id="location-legend">Mumbai, IN</h1>
+                        <h1 class="location" id="coordinates">19.1398<strong>N</strong> 72.8728<strong>E</strong></h1>
+                    </div>
+                </div>
+                <div class="date-container">
+                    <div class="time" id="time">
+                        12:30 <span id="am-pm">AM</span>
+                    </div>
+                    <div class="date" id="date">
+                        Monday, 24 May
+                    </div>
+                    <div class="others" id="current-weather-items">
+                        <div class="weather-item">
+                            <div>Humidity</div>
+                            <div>45 %</div>
+                        </div>
+                        <div class="weather-item">
+                            <div>Pressure</div>
+                            <div>1014 hPa</div>
+                        </div>
+                        <div class="weather-item">
+                            <div>Wind Speed</div>
+                            <div>3.09 m/s</div>
+                        </div>
+                        <div class="weather-item">
+                            <div>Feels like</div>
+                            <div>30.05&#176;C</div>
+                        </div>
+                        <div class="weather-item">
+                            <div>Sunrise</div>
+                            <div>06:58 am</div>
+                        </div>
+                        <div class="weather-item">
+                            <div>Sunset</div>
+                            <div>18:00 pm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="current-info-description">
+                <p id="location-description"><em>Currently: CLEAR SKIES. The high will be 32.67&#176;C. Have a nice day!</em></p>
+            </div>
+        </div>
+
+        <div class="future-forecast" id="future-forecast">
+            <div class="today" id="current-temp">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Monday</div>
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+            </div>
+
+            <div class="weather-forecast" id="weather-forecast">
+                <div class="weather-forecast-item">
+                    <div class="day">Tue</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Wed</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Thu</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Fri</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Sat</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Sun</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day">Mon</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <div class="temp">Night - 25.6&#176;C</div>
+                    <div class="temp">Day - 35.6&#176;C</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activity" id="activity-section">
+        <div class="activity-container">
+            <h1>Activity Catalogue</h1>
+            <div class="wrapper">
+                <div class="inputField">
+                    <input type="text" placeholder="Add new task!">
+                    <button><span class="fas fa-plus"></span></button>
+                </div>
+                <p id="prompt">*Mark all outdoor activities (in green)</p>
+                <ul class="todoList">
+                    <!-- Data comes from local storage -->
+                </ul>
+                <div class="footer">
+                    <span>You have <span class="pendingTasks"></span> pending tasks</span>
+                    <button>Clear All</button>
+                </div>
+            </div>
+        </div>
+        <div class="notification-card">
+            <div class="notification-title">
+                <h1 id="condition"></h1>
+                <a href="https://weather.com/en-IN/?Goto=Redirected"><img src="public/images/The-weather-channel.png" alt="The weather channel" width="60px" height="60px"></a>
+            </div>
+            <hr class="notification-rule">
+            <p id="suggestion"></p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact-section">
+        <h1 id="contact-heading">Contact Me!</h1>
+        <div class="socials">
+            <a href="https://www.instagram.com/ary_n_meth/"><span class="fab fa-instagram"></span></a>
+            <a href="https://github.com/aryan-mehta05"><span class="fab fa-github"></span></a>
+            <a href="https://www.linkedin.com/in/aryan-mehta-180685204/"><span class="fab fa-linkedin-in"></span></a>
+            <a href="https://www.facebook.com/aryan.n.mehta"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://openweathermap.org/api"><span class="fas fa-smog"></span></a>
+        </div>
+        <p id="copyright">&#0169;2021 - Aryan Nimesh Mehta</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js" defer></script>
+
+</body>
+</html>
